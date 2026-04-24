@@ -135,3 +135,20 @@ footer {
     padding: 20px;
     margin-top: 50px;
 }
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Box ko poori screen par phela dega */
+        padding: 10px;
+    }
+
+    input, button {
+        width: 100%; /* Registration form ke fields full width ho jayenge */
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column; /* Menu items ek ke neeche ek aa jayenge */
+    }
+}
