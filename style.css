@@ -152,3 +152,69 @@ footer {
         flex-direction: column; /* Menu items ek ke neeche ek aa jayenge */
     }
 }
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container ko flexible banayein */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Horizontal scroll khatam karne ke liye */
+}
+
+/* Navbar Responsive */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap; /* Mobile par menu niche lane ke liye */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+/* Hero Section (Main Heading) */
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Sections/Cards layout */
+.services, .features {
+    display: flex;
+    flex-wrap: wrap; /* Cards ko ek ke niche ek lane ke liye */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px; /* Minimum 300px width, phir auto adjust */
+    max-width: 100%;
+}
+
+/* --- Mobile Specific Queries --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Menu items ek ke niche ek */
+        width: 100%;
+        text-align: center;
+        display: none; /* Aap toggle button use kar sakte hain */
+    }
+    
+    h1 {
+        font-size: 1.8rem; /* Font size chota mobile ke liye */
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
