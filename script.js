@@ -47,3 +47,14 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(greeting + "Apna Tree ویب سائٹ پر خوش آمدید");
     }
 });
+<script>
+    const menu = document.querySelector('#mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        
+        // Optional: Animation for hamburger to X
+        menu.classList.toggle('is-active');
+    });
+</script>
