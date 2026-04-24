@@ -218,3 +218,63 @@ nav ul {
         padding: 20px;
     }
 }
+/* General Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d5a27; /* Green color from your screenshot */
+    padding: 15px 20px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Mobile Menu Styles (Hide on Desktop) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: -100%; /* Initially hidden off-screen */
+        flex-direction: column;
+        background-color: #2d5a27;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in when active */
+    }
+}
